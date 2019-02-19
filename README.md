@@ -3,7 +3,7 @@ https://docs.docker.com/get-started/part2/
 
 ### Lav en Dockerfile
 En Dockerfile definer dit miljø i containeren.  
-´´´
+```
 # Use an official Python runtime as a parent image
 FROM python:2.7-slim
 
@@ -24,7 +24,7 @@ ENV NAME World
 
 # Run app.py when the container launches
 CMD ["python", "app.py"]
-´´´
+```
 
 
 
