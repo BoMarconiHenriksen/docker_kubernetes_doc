@@ -25,7 +25,32 @@ ENV NAME World
 # Run app.py when the container launches
 CMD ["python", "app.py"]
 ```
+### Build appen
+Lav et docker image med build komandoen. Vi giver vores image et navn vha --tag eller -t.  
+```
+docker build --tag=friendlyhello:v0.0.1 .
+```
+Tjek din lokale docker image registry.  
+```
+docker image ls
+```
+### Run the app
+local host 4000 og containeren publishes til port 80.  
+```
+docker run -p 4000:80 friendlyhello
 
-
-
-
+curl http://localhost:4000
+http://localhost:4000/
+```
+### Stop the container
+ctrl + c
+##### On windows
+```
+docker container ls
+docker container stop `<Container NAME or ID>`
+```
+### Run the app in the background in detached mode
+```
+docker run -d -p 4000:80 friendlyhello
+docker container ls
+```
