@@ -7,4 +7,3 @@ This is not going to be deployed.
 3. Build image from dockerfile.  
 4. Run image as container.  
 5. Connect to web app from browser.  
-
