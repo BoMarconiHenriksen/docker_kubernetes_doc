@@ -1,0 +1,18 @@
+# The version of docker-compose we are going to use.
+version: '3'
+
+# Tell docker-compose here is what we want to do.
+# Services is a type of a container.
+services:
+  # Ower first container.
+  redis-server:
+    image: 'redis'
+  node-app:
+    restart: always
+    # Look for a Dockerfile in the curent folder and build it.
+    build: .
+    # The ports we want to open up for this container.
+    ports: 
+      # - specifies an array in yml file.
+      # Local machine:container
+      - "4001:8081"
