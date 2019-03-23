@@ -29,5 +29,7 @@ app.listen(8080, () => {
     console.log('Listening on port 8080');
 });
 ```
-
-
+8. Create a Dockerfile.  
+9. Remember to copy the build folder.  
+10. In the Node_web_project folder write ```docker build .```  or ```docker build bomarconi/simpleweb .```
+11. localhost:8080 -> does not work see next section.  
