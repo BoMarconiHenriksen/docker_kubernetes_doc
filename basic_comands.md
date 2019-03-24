@@ -1,10 +1,15 @@
 ```
 docker build -t friendlyhello .  # Create image using this directory's Dockerfile.
+docker build -f Dockerfile.dev . # Build a Dockerfile with a custom name.  
+
 docker run -p 4000:80 friendlyhello  # Run "friendlyname" mapping port 4000 to 80.
 docker run -d -p 4000:80 friendlyhello         # Same thing, but in detached mode.
 docker run username/repository:tag                   # Run image from a registry . 
 docker run <image name> <command> Eks. docker run bustbox ls   # Default command in image is not going to be executed.  
 docker run -it <image name> sh # Open a terminal in the docker container. Can't run any other process. For that use docker exec.  
+docker run -p 3000:3000 -v /app/node_modules -v $(pwd):/app imageId # Setup a volume a reference.  
+docker run <containerId> npm run test # Run test manually for a Node app.  
+docker run -it <containerId> npm run test # Run test manually and interact with the test menu.  
 
 docker ps # List all running containers on your machine.
 docker ps --all # List all the containers we have created.
