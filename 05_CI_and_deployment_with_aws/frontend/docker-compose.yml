@@ -1,0 +1,22 @@
+version: '3'
+services: 
+  web:
+    build:
+      # Look in the curent working directory and find the file Dockerfile.dev. 
+      context: .
+      dockerfile: Dockerfile.dev
+    ports: 
+      - "3000:3000"
+    volumes: 
+      - /app/node_modules # We want this to be a placeholder inside the container. Do not map it up with anything.  
+      # When you lokk at /app folder in the container go back to the curent working directory on local machine.
+      - .:/app # the curent folder outside the container( . ) to the folder inside the container(/app).  
+  tests:
+    build: 
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes: 
+      - /app/node_modules
+      - .:/app
+      # Overwrite the starting command when the test service is created.  
+    command: ["npm", "run", "test"]

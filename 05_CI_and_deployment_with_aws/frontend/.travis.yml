@@ -1,0 +1,31 @@
+# We need super user permissions when using docker.
+sudo: required
+# Travis make sure docker cli is preinstalled.
+services:
+  - docker
+
+# Before our test run make sure to do this.
+before_install:
+  - docker build -t bomarconi/docker-react -f Dockerfile.dev .
+
+# The script section is going to contain all the commands to run the test suite.
+script:
+  # Make sure the test suite exit when it has been run with -- --coverage
+  - docker run bomarconi/docker-react npm run test -- --coverage
+
+# For deployment on aws
+deploy:
+  # Travis has implemented diffrent providers. For region see the url in beanstalk.
+  provider: elasticbeanstalk
+  region: us-east-2
+  app: "docker"
+  env: "Docker-env"
+  # hd on aws. Click services, enter s3, click the link and get the name.
+  bucket_name: "elasticbeanstalk-us-east-2-338074124185"
+  bucket_path: "docker"
+  # Only deploy if pull request to master.
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
