@@ -1,0 +1,53 @@
+version: "3"
+services:
+  # The name of the postgres instance.
+  postgress:
+    image: "postgres:latest"
+  redis:
+    image: "redis:latest"
+  nginx:
+    # Always has to run because it's routing our app so we add a restart policy.
+    restart: always
+    build: 
+      dockerfile: Dockerfile.dev
+      context: ./nginx
+    ports: 
+      - '3050:80'
+  api:
+    build:
+      dockerfile: Dockerfile.dev
+      # Look in the server folder and use that folder to build.
+      context: ./server
+    volumes:
+      # Leave this folder as it is in the container.
+      - /app/node_modules
+      # Look in the server directory and copy all of the content to /app in the container
+      - ./server:/app
+    environment:
+      # We don't specify the ip to the service just the name of the service.
+      - REDIS_HOST=redis
+      # Find the port at docker hub
+      - REDIS_PORT=6379
+      - PGUSER=postgres
+      - PGHOST=postgres
+      - PGDATABASE=postgres
+      # Find the default password at docker hub
+      - PGPASSWORD=postgres_password
+      - PGPORT=5432
+  client:
+    build: 
+      dockerfile: Dockerfile.dev
+      context: ./client
+    volumes:
+      - /app/node_modules
+      - ./client:/app
+  worker:
+    build: 
+      dockerfile: Dockerfile.dev
+      context: ./worker
+    volumes: 
+      - /app/node_modules
+      - ./worker:/app
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379

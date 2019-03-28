@@ -1,0 +1,48 @@
+sudo: required
+services:
+  # We want to get access to a copy of docker
+  - docker
+
+before_install:
+  # Build a test version of our client project
+  # We use the Dockerfile.dev because we only get access to the test suites when we have all other dependencies attached to the project
+  # We can not run test with the production file. -t = tag and -f = specify a dockerfile in the client folder and ./client is the build context
+  - docker build -t bomarconi/react-test -f ./client/Dockerfile.dev ./client
+  # - docker build myOtherProject...
+
+# If a test fail the scipt will exit with a number higer than 0
+script:
+  # To get out of watch mode after npm test run use -- --coverage
+  - docker run bomarconi/react-test npm test -- --coverage
+  # - docker run myOtherProject runMyTests
+
+# Build production versions of all our projects and then to docker hub
+after_success:
+  - docker build -t bomarconi/multi-client ./client
+  - docker build -t bomarconi/multi-nginx ./nginx
+  - docker build -t bomarconi/multi-server ./server
+  - docker build -t bomarconi/multi-worker ./worker
+
+  # Log in to the docker cli
+  # Get the password and emit over stdin as input to the next command(other side of the pipe).
+  # We then run the login command and add the docer id and it can expect to recieve the password over stdin.
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+
+  # Take all the build inamges and push them to docker hub
+  - docker push bomarconi/multi-client
+  - docker push bomarconi/multi-nginx
+  - docker push bomarconi/multi-server
+  - docker push bomarconi/multi-worker
+
+deploy:
+  provider: elsaticBeanstalk
+  region: us-east-2
+  app: multi-docker
+  env: MultiDocker-env
+  bucket_name: elasticbeanstalk-us-east-2-338074124185
+  bucket_path: docker-multi
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_id:
+    secure: $AWS_SECRET_KEY
