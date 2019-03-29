@@ -1,8 +1,22 @@
 # Setup on windows
 https://kubernetes.io/docs/tasks/tools/install-minikube/  
 https://chocolatey.org/install#installing-chocolatey  
+
+
 1. Install kubectl https://kubernetes.io/docs/tasks/tools/install-kubectl/  
 2. Install minikube  
+
+### Install kubectl
+1. Get the latest version here https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl  
+2. Create a folder called .kube  
+3. Set the path to the .kube folder in a system environment variable.  
+
+### Install Minicube
+https://kubernetes.io/docs/tasks/tools/install-minikube/
+To run Minikube on Windows, you need to install Hyper-V first(if you have install docker it it installed). .
+You can install it with chocolatey ```choco install minikube kubernetes-cli``` or  
+download it https://github.com/kubernetes/minikube/releases/tag/v1.0.0 add the file to a folder and make a path in an environment variable.  
+
 
 ### Install minikube on Hyper-V
 1. In powershell(open as admin) write: *Get-NetAdapter*  
