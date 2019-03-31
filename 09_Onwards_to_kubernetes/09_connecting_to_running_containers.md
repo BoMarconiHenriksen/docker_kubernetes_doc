@@ -11,4 +11,4 @@ In the command line run:
 4. kubectl get pods  
 5. kubectl get services  
 6. minikube ip  
-7. Open your browser and go to: 192.168.10.179:31515  
+7. Open your browser and go to: yourIpAddress:31515  
