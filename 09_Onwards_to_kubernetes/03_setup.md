@@ -2,7 +2,7 @@
 https://www.c-sharpcorner.com/article/getting-started-with-kubernetes-on-windows-10-using-hyperv-and-minikube/  
 
 #### Install goggle cloud sdk for windows.  
-https://cloud.google.com/sdk/install#windows  
+https://cloud.google.com/sdk/docs/quickstart-windows  
 
 Run gcloud as administrator  
 gcloud components install kubectl  
