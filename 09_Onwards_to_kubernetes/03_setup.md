@@ -19,6 +19,7 @@ Open powerShell or cmd and test that minikube works: ```minikube version```
 Run minikube commands from powerShell.  
 
 #### Install minikube on Hyper-V
+Follow this tutorial.  
 https://docs.docker.com/machine/drivers/hyper-v/#2-set-up-a-new-external-network-switch-optional  
 
 minikube start --vm-driver=hyperv --hyperv-virtual-switch="Primary Virtual Switch" --v=7 --alsologtostderr  
