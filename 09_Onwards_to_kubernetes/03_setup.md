@@ -15,7 +15,7 @@ change the name to minikube.exe
 Now, keep it at any location as per your wish.  
 Now add this folder path as part of your PATH environment variable.  
 Open 'System Properties' by searching 'View advanced system settings' in your machine and update the PATH variable.  
-Open powerShell or cmd and test that minikube works: minikube version  
+Open powerShell or cmd and test that minikube works: ```minikube version```  
 Run minikube commands from powerShell.  
 
 #### Install minikube on Hyper-V
