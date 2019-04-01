@@ -22,6 +22,8 @@ Run minikube commands from powerShell.
 Follow this tutorial.  
 https://docs.docker.com/machine/drivers/hyper-v/#2-set-up-a-new-external-network-switch-optional  
 
+After the restart run this command. Be sure to change ```--hyperv-virtual-switch="Primary Virtual Switch"``` if you gave the switch another name.  
+
 minikube start --vm-driver=hyperv --hyperv-virtual-switch="Primary Virtual Switch" --v=7 --alsologtostderr  
 (you can add a memory flag: --memory 4096)  
 
