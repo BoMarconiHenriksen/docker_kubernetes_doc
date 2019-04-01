@@ -3,6 +3,9 @@
 #### Add an object to  cluster
 > ```kubectl apply -f <filename>```  
 ```kubectl apply -f client-pod.yaml```  
+#### Apply all the files in a folder
+> ```kubectl apply -f <folder name>```  
+```kubectl apply -f k8s```
 #### Update an object and inspect the changes
 > apply is how we make any changes to our kubernetes cluster.  
 > describe is used to print out information about the object.  
@@ -29,6 +32,17 @@ docker push bomarconi/multi-client:5
 kubectl get pods  
 #### Entering docker in the virtual machine which is diffrent from the docker on your machine
 ```eval $(minikube docker-env)``` # Only works for that terminal.  
+#### Delete a deployment locally
+```kubectl delete deployment client-deployment```
+#### Get persistent volume  
+```kubectl get pv```  
+#### Get all the claims
+```kubectl get pvc```  
+#### Creating a secret
+> ```kubectl create secret generic <secret_name> --from-literal key=value```  
+```kubectl create secret generic pgpassword --from-literal PGPASSWORD=password123```  
+#### See what secrets are created
+```kubectl get secrets```  
 
 
 
@@ -38,6 +52,3 @@ minikube ip
 #### Connect to the local cluster
 1. minikube ip  
 2. ```<the ip you just got>:31515```  
-
-
-
