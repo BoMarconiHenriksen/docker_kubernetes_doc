@@ -1,3 +1,6 @@
+Docker Tutorial by Stephen Grider
+https://github.com/StephenGrider/DockerCasts  
+
 # Docker Tutorial
 https://docs.docker.com/get-started/part2/  
 
