@@ -20,5 +20,5 @@ We have to set up our login to docker in Travis.
 ```
 script:
   # -- -- coverage means no watchmode
-  - docker run bomarconi/react-test npm test -- -- coverage
+  - docker run bomarconi/react-test npm test -- --coverage
 ```
