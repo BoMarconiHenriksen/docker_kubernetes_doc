@@ -52,3 +52,5 @@ minikube ip
 #### Connect to the local cluster
 1. minikube ip  
 2. ```<the ip you just got>:31515```  
+#### Delete a lucal cluster
+```minikube delete```  
