@@ -25,7 +25,10 @@ https://skaffold.dev/docs/references/yaml/
 2. ```skaffold init -f skaffold.yml``` # Choice the dockerfile to build each image and skaffold will autogenerate your skaffold.yml file.  
 3. 
 
-skaffold dev -p dev -v=info
-skaffold dev
+skaffold dev -p dev -v=info  
+skaffold dev  
 
-
+### Commands for our system
+docker login  
+skaffold dev -p dev  
+skaffold dev -p prod  
