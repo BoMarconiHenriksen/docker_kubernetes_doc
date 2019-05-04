@@ -14,3 +14,10 @@ More information https://github.com/BoMarconiHenriksen/docker_tutorial/blob/mast
 
 #### Apply all the files locally. Applys all the files in a folder.
 ```kubectl apply -f k8s```  
+
+### Remember to set up ingress locally if you have the ingress config file
+https://github.com/BoMarconiHenriksen/docker_tutorial/blob/master/Docker_and_Kubernetes/12_Handling_trafic_with_ingress_controller/04_setting_up_ingress_locally.md  
+
+### Test it
+minikube ip and go to the ip address in your browser.  
+minikube dashboard  
