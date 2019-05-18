@@ -14,6 +14,10 @@ We need to be sure, that when we take the app to the production that we create t
 *secret_name* - name of secret, for later referance in a pod config.  
 *--from-literal* we are going to add the secret information into this command, as oppose to from . file.  
 *key=value* key-value pair of the secret information.  
-```kubectl create secret generic pgpassword --from-literal PGPASSWORD=password123```  
+```
+kubectl create secret generic pgpassword --from-literal PGPASSWORD=password123
+// mssql - https://docs.microsoft.com/en-us/sql/linux/tutorial-sql-server-containers-kubernetes?view=sql-server-2017  
+kubectl create secret generic mssqlpassword --from-literal SA_PASSWORD=MyC0m9l&xP@ssw0rd
+```  
 #### See what secrets are created
 ```kubectl get secrets```  
