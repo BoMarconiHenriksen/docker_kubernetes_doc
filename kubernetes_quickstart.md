@@ -9,7 +9,7 @@ Starts up a new cluster or start up the old cluster.
 ```kubectl get services```  
 
 #### Create a secret for the database
-More information https://github.com/BoMarconiHenriksen/docker_tutorial/blob/master/11_A_multi_container_app_with_kubernetes/20_creating_an_encoded_secret.md  
+More information https://github.com/BoMarconiHenriksen/docker_tutorial/blob/master/Docker_and_Kubernetes/11_A_multi_container_app_with_kubernetes/20_creating_an_encoded_secret.md
 ```kubectl create secret generic pgpassword --from-literal PGPASSWORD=password123```  
 
 #### Apply all the files locally. Applys all the files in a folder.
