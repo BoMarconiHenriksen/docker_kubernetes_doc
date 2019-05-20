@@ -1,6 +1,6 @@
 # Get started locally with kubernetes
 Starts up a new cluster or start up the old cluster.
-```minikube start --vm-driver=hyperv --hyperv-virtual-switch="Primary Virtual Switch" --v=7 --alsologtostderr```  
+```minikube start --vm-driver=hyperv --hyperv-virtual-switch="Primary Virtual Switch" --v=7 --memory=6000 --alsologtostderr```  
 
 ```minikube status```  
 
