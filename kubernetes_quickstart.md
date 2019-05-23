@@ -4,7 +4,7 @@ Starts up a new cluster or start up the old cluster.
 ```minikube start --vm-driver=hyperv --hyperv-virtual-switch="Primary Virtual Switch" --v=7 --memory=6000 --alsologtostderr```  
 ##### Linux  
 ```minikube start --memory 4000```  
-
+##### Get minikube status
 ```minikube status```  
 
 #### Get the ip
