@@ -1,5 +1,12 @@
-info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
-      Entity Framework Core 2.2.3-servicing-35854 initialized 'RepositoryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+USE master
+GO
+
+CREATE DATABASE c3NextGen
+
+GO
+
+USE c3NextGen
+
 IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
 BEGIN
     CREATE TABLE [__EFMigrationsHistory] (
