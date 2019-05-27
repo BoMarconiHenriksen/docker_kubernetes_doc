@@ -1,11 +1,11 @@
-USE master
+USE master;
 GO
 
-CREATE DATABASE c3NextGen
+CREATE DATABASE c3NextGen;
 
 GO
 
-USE c3NextGen
+USE c3NextGen;
 
 IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
 BEGIN
