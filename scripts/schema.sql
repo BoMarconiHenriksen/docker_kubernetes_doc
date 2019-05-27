@@ -1,21 +1,11 @@
 USE master
 GO
-IF(db_id(N'c3NextGen') IS NULL)
-BEGIN
-	CREATE DATABASE c3NextGen
-END;
-GO
-USE c3NextGen
-IF NOT EXISTS (SELECT * FROM sysobjects WHERE NAME='c3NextGen' AND XTYPE='U')
 
-IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
-BEGIN
-    CREATE TABLE [__EFMigrationsHistory] (
-        [MigrationId] nvarchar(150) NOT NULL,
-        [ProductVersion] nvarchar(32) NOT NULL,
-        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
-    );
-END;
+CREATE DATABASE c3NextGen
+
+GO
+
+USE c3NextGen
 
 GO
 
