@@ -2,7 +2,7 @@
 The documentation is a little bit confusing so we are going to take it stpe by step https://kubernetes.github.io/ingress-nginx/deploy/  
 1. Click Generic Deployment  
 > No matter in which cloud you deploy you have to do the mandatory commands.  
-```kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/mandatory.yaml```   
+```kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/mandatory.yaml```   
 2. Copy the mandatory command and run inside your terminal.  
 If you want to see whats happening behind the scene. Just copy the link and pate it into your browser to inspect the config file.  
 3. Click on minikube on the documentation page.  
