@@ -1,3 +1,4 @@
+```
 docker build -t friendlyhello .  # Create image using this directory's Dockerfile.
 docker build -f Dockerfile.dev . # Build a Dockerfile with a custom name.  
 
@@ -14,11 +15,15 @@ docker ps # List all running containers on your machine.
 docker ps --all # List all the containers we have created.
 
 docker stop $(docker ps -a -q) # Stop all running containers.  
+```
 ##### Enter docker container in shell
+```
 docker run -it -d <image id or name>  
 docker ps  
 docker exec -it <container id> sh  
+```
 ##### Purging All Unused or Dangling Images, Containers, Volumes, and Networks
+```
 docker system prune # Delete all containers locally.  
 docker system prune -a # To additionally remove any stopped containers and all unused images.  
 
@@ -44,7 +49,7 @@ docker image rm $(docker image ls -a -q)   # Remove all images from this machine
 docker login             # Log in this CLI session using your Docker credentials.
 docker tag <image> username/repository:tag  # Tag <image> for upload to registry.
 docker push username/repository:tag            # Upload tagged image to registry.
-
+```
 ### Service
 ```
 docker stack ls                                            # List stacks or apps.
