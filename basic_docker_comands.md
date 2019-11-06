@@ -14,6 +14,7 @@ docker run -it <containerId> npm run test # Run test manually and interact with 
 docker ps # List all running containers on your machine.
 docker ps --all # List all the containers we have created.
 
+docker stop $(docker ps -a -q) # Stop all running containers.  
 docker system prune # Delete all containers locally.  
 
 docker logs <container id> # Get logs/output from inside a container.  
