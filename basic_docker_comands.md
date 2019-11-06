@@ -1,4 +1,3 @@
-```
 docker build -t friendlyhello .  # Create image using this directory's Dockerfile.
 docker build -f Dockerfile.dev . # Build a Dockerfile with a custom name.  
 
@@ -46,7 +45,6 @@ docker login             # Log in this CLI session using your Docker credentials
 docker tag <image> username/repository:tag  # Tag <image> for upload to registry.
 docker push username/repository:tag            # Upload tagged image to registry.
 
-```
 ### Service
 ```
 docker stack ls                                            # List stacks or apps.
@@ -57,8 +55,4 @@ docker inspect <task or container>                   # Inspect task or container
 docker container ls -q                                      # List container IDs.
 docker stack rm <appname>                             # Tear down an application.
 docker swarm leave --force      # Take down a single node swarm from the manager.
-```
-### Swarms
-```
-
 ```
