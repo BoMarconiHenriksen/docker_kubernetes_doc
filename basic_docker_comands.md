@@ -15,7 +15,13 @@ docker ps # List all running containers on your machine.
 docker ps --all # List all the containers we have created.
 
 docker stop $(docker ps -a -q) # Stop all running containers.  
+##### Enter docker container in shell
+docker run -it -d <image id or name>  
+docker ps  
+docker exec -it <container id> sh  
+##### Purging All Unused or Dangling Images, Containers, Volumes, and Networks
 docker system prune # Delete all containers locally.  
+docker system prune -a # To additionally remove any stopped containers and all unused images.  
 
 docker logs <container id> # Get logs/output from inside a container.  
 
