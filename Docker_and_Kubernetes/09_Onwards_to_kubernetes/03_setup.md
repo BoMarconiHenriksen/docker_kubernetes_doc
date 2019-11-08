@@ -7,6 +7,10 @@ https://cloud.google.com/sdk/docs/quickstart-windows
 Run gcloud as administrator  
 gcloud components install kubectl  
 
+#### Update kubectl and minikube
+Run gcloud as administrator  
+gcloud components update  
+
 #### Download minikube 
 Open powerShell as administrator.   
 https://github.com/kubernetes/minikube/releases  
