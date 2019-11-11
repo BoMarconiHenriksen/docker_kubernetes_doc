@@ -5,8 +5,14 @@
 ```
 kubectl get pods  
 kubectl logs <pod name>  
-Eks. kubectl logs django-deployment-55fbf9995d-dm8kc  
+Ex.: kubectl logs django-deployment-55fbf9995d-dm8kc  
 ```  
+#### Enter the container shell
+```
+kubectl get pods  
+kubectl exec -it <pod name> -- /bin/bash  
+Ex.: kubectl exec -it django-deployment-55fbf9995d-dm8kc -- /bin/bash  
+```
 #### Add an object to  cluster
 > ```kubectl apply -f <filename>```  
 ```kubectl apply -f client-pod.yaml```  
