@@ -1,5 +1,12 @@
 # Kubectl and minikube commands
 ### Kubectl
+### Debug pods
+#### Get the log of a pod
+```
+kubectl get pods  
+kubectl logs <pod name>  
+Eks. kubectl logs django-deployment-55fbf9995d-dm8kc  
+```  
 #### Add an object to  cluster
 > ```kubectl apply -f <filename>```  
 ```kubectl apply -f client-pod.yaml```  
