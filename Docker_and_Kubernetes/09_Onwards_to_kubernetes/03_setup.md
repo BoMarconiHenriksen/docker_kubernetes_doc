@@ -13,7 +13,22 @@ minikube start --vm-driver=hyperv --hyperv-virtual-switch="Primary Virtual Switc
 minikube status  
 minikube delete 
 
-#### Install goggle cloud sdk for windows.  
+#### Download minikube 
+Download the minikube installer for windows https://kubernetes.io/docs/tasks/tools/install-minikube/  
+Run the installer.  
+
+Open powerShell or cmd and test that minikube works: ```minikube version```  
+Run minikube commands from powerShell.  
+
+#### Install kubectl
+https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-windows  
+Download the latest version of kubectl. See the link.  
+Create a folder on your machine called .kubectl  
+Move the downloaded file to that folder.  
+Create a path to the folder and move it higher than the docker path if you have installed docker desktop.  
+Open a terminal and write kubectl version  
+
+#### Alternative is to install kubectl with goggle cloud sdk for windows.  
 https://cloud.google.com/sdk/docs/quickstart-windows  
 
 Run gcloud as administrator  
@@ -22,12 +37,3 @@ gcloud components install kubectl
 #### Update kubectl and minikube
 Run gcloud as administrator  
 gcloud components update  
-
-#### Download minikube 
-Download the minikube installer for windows https://kubernetes.io/docs/tasks/tools/install-minikube/  
-Run the installer.  
-
-Open powerShell or cmd and test that minikube works: ```minikube version```  
-Run minikube commands from powerShell.  
-
- 
