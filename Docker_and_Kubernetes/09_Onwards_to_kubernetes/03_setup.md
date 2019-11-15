@@ -12,13 +12,9 @@ Run gcloud as administrator
 gcloud components update  
 
 #### Download minikube 
-Open powerShell as administrator.   
-https://github.com/kubernetes/minikube/releases  
-change the name to minikube.exe  
+Download the minikube installer for windows https://kubernetes.io/docs/tasks/tools/install-minikube/  
+Run the installer.  
 
-Now, keep it at any location as per your wish.  
-Now add this folder path as part of your PATH environment variable.  
-Open 'System Properties' by searching 'View advanced system settings' in your machine and update the PATH variable.  
 Open powerShell or cmd and test that minikube works: ```minikube version```  
 Run minikube commands from powerShell.  
 
