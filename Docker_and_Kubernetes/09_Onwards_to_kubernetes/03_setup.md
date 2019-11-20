@@ -7,18 +7,12 @@ https://docs.docker.com/machine/drivers/hyper-v/#2-set-up-a-new-external-network
 
 After the restart run this command. Be sure to change ```--hyperv-virtual-switch="Primary Virtual Switch"``` if you gave the switch another name.  
 
+##### Run these commands after installing kubectl and minikube
 minikube start --vm-driver=hyperv --hyperv-virtual-switch="Primary Virtual Switch" --v=7 --alsologtostderr  
 (you can add a memory flag: --memory 4096)  
 
 minikube status  
 minikube delete 
-
-#### Download minikube 
-Download the minikube installer for windows https://kubernetes.io/docs/tasks/tools/install-minikube/  
-Run the installer.  
-
-Open powerShell or cmd and test that minikube works: ```minikube version```  
-Run minikube commands from powerShell.  
 
 #### Install kubectl
 https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-windows  
@@ -34,6 +28,12 @@ https://cloud.google.com/sdk/docs/quickstart-windows
 Run gcloud as administrator  
 gcloud components install kubectl  
 
+#### Download minikube 
+Download the minikube installer for windows https://kubernetes.io/docs/tasks/tools/install-minikube/  
+Run the installer.  
+
+Open powerShell or cmd and test that minikube works: ```minikube version```  
+Run minikube commands from powerShell.  
 #### Update kubectl and minikube
 Run gcloud as administrator  
 gcloud components update  
