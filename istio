@@ -1,0 +1,8 @@
+# Installation of Istio in Rancher
+When you enable Istio in Rancher add the LoadBalancer(enable ingress gateway) when using MetalLB.  
+### Disable nginx
+We have experinced that the routing will change between our demo app and the default 404 nginx page. To avoid this you have to disable nginx.  
+This is still an issue.  
+
+### 
+
