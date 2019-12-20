@@ -1,0 +1,11 @@
+
+# Api version for Helm api.
+apiVersion: v1
+
+# Versionen af den applikation du vil installer med Helm.
+appVersion: "1.0"
+Description: A Helm chart for Guestbook 1.0
+Name: guestbook
+
+# Version af din chart. Skal følge - Major, Minor, patch.
+Version: 0.1.0
