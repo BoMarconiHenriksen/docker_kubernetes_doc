@@ -1,0 +1,6 @@
+# Used to overwrite username and password from the top chart.
+backend:
+  secret:
+    mongodb_uri:
+      username: admin
+      password: password
