@@ -1,5 +1,6 @@
 # Used to overwrite username and password from the top chart.
 backend:
+  enabled: true
   secret:
     mongodb_uri:
       username: admin
@@ -18,3 +19,9 @@ ingress:
     - host:
         domain: backend.minikube.local
         chart: backend
+database:
+  enabled: true
+
+tags:
+  api: true
+  
