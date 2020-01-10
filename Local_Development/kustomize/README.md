@@ -10,3 +10,7 @@ If you are on windows you get a .tar.gz file.
 ### Enviroment Variable
 1. Add the file as an enviroment variable.  
 2. ```kustomize version```  
+### Example
+Cd into the folder with kustomize.yaml.  
+Create the yaml files and apply them on your Rancher cluster.  
+```kustomize build . | rancher kubectl apply -f -```  
