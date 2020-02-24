@@ -34,6 +34,7 @@ Run the installer.
 
 Open powerShell or cmd and test that minikube works: ```minikube version```  
 Run minikube commands from powerShell.  
+minikube start --vm-driver=hyperv --hyperv-virtual-switch="Primary Virtual Switch" --v=7 --memory=6000 --alsologtostderr  
 #### Update kubectl and minikube
 Run gcloud as administrator  
 gcloud components update  
